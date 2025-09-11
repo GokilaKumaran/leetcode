@@ -2,27 +2,48 @@
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
- *     ListNode next;
+ *     ListNode next;7
  *     ListNode() {}
  *     ListNode(int val) { this.val = val; }
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        PriorityQueue<Integer> res = new  PriorityQueue<>();
-        for(ListNode list:lists){
-            while(list!=null){
-                res.add(list.val);
-                list=list.next;
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+        return mergeKListsHelper(lists, 0, lists.length - 1);
+    }
+    
+    private ListNode mergeKListsHelper(ListNode[] lists, int start, int end) {
+        if (start == end) {
+            return lists[start];
+        }
+        int mid = start + (end - start) / 2;
+        ListNode left = mergeKListsHelper(lists, start, mid);
+        ListNode right = mergeKListsHelper(lists, mid + 1, end);
+        return merge(left, right);
+    }
+    
+    private ListNode merge(ListNode l1, ListNode l2) {
+        ListNode newlist= new ListNode(0);
+        ListNode current = newlist;
+        
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                current.next = l1;
+                l1 = l1.next;
+            } else {
+                current.next = l2;
+                l2 = l2.next;
             }
+            current = current.next;
         }
-        ListNode newlist =new ListNode(0);
-        ListNode current=newlist;
-        while(!res.isEmpty()){
-            current.next=new ListNode(res.poll());
-            current=current.next;
-        }
+        
+        current.next = (l1 != null) ? l1 : l2;
+        
         return newlist.next;
     }
 }
