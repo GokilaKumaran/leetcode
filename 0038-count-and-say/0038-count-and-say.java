@@ -1,22 +1,23 @@
 class Solution {
     public String countAndSay(int n) {
-        if (n == 1) return "1";
-
-        String prev = countAndSay(n - 1);  // Recursive call to get previous term
-        StringBuilder result = new StringBuilder();
-
-        int count = 1;
-        for (int i = 0; i < prev.length(); i++) {
-            // If next character is same, increment count
-            if (i + 1 < prev.length() && prev.charAt(i) == prev.charAt(i + 1)) {
-                count++;
-            } else {
-                // Else, append count and digit to result, reset count
-                result.append(count).append(prev.charAt(i));
-                count = 1;
+        String out = "1 ";
+        while(n > 1) {
+            String rle = "";
+            char com = out.charAt(0);
+            int count = 0;
+            for(char c : out.toCharArray()) {
+                if(com == c) {
+                    count++;
+                } else {
+                    rle += count+""+com;
+                    com = c;
+                    count = 1;
+                }
             }
-        }
-
-        return result.toString();
+            out = rle + " ";
+            n--;
+        } 
+        out = out.substring(0,out.length()-1);
+        return out;
     }
 }
