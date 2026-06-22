@@ -12,12 +12,14 @@
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0064-minimum-path-sum](https://github.com/GokilaKumaran/leetcode/tree/main/0064-minimum-path-sum/) | Medium |
 | [0118-pascals-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0118-pascals-triangle/) | Easy |
 | [0120-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0120-triangle/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0062-unique-paths](https://github.com/GokilaKumaran/leetcode/tree/main/0062-unique-paths/) | Medium |
+| [0064-minimum-path-sum](https://github.com/GokilaKumaran/leetcode/tree/main/0064-minimum-path-sum/) | Medium |
 | [0118-pascals-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0118-pascals-triangle/) | Easy |
 | [0120-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0120-triangle/) | Medium |
 ## Math
@@ -28,4 +30,8 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0062-unique-paths](https://github.com/GokilaKumaran/leetcode/tree/main/0062-unique-paths/) | Medium |
+## Matrix
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0064-minimum-path-sum](https://github.com/GokilaKumaran/leetcode/tree/main/0064-minimum-path-sum/) | Medium |
 <!---LeetCode Topics End-->
