@@ -13,8 +13,10 @@
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0118-pascals-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0118-pascals-triangle/) | Easy |
+| [0120-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0120-triangle/) | Medium |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0118-pascals-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0118-pascals-triangle/) | Easy |
+| [0120-triangle](https://github.com/GokilaKumaran/leetcode/tree/main/0120-triangle/) | Medium |
 <!---LeetCode Topics End-->
